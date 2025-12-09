@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetNest – Adopt a Buddy</title>
+
+  <!-- Google Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <div class="brand">
+        <span class="brand-icon">❤</span>
+        <span class="brand-name">PetNest</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#features">Why PetNest</a>
+        <a href="#pets">Pets</a>
+        <a href="#care">Care Tips</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="nav-toggle" aria-label="Toggle menu">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>
+          Find Your Perfect<br />
+          <span class="accent">Furry Companion</span>
+        </h1>
+        <p>
+          Give a loving home to pets in need. Browse our adoptable dogs and cats
+          waiting for their forever families.
+        </p>
+        <div class="hero-actions">
+          <a href="#pets" class="btn primary">Browse Pets</a>
+          <a href="#care" class="btn secondary">Care Tips</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section">
+      <h2 class="section-title">Why Choose PetNest?</h2>
+      <p class="section-subtitle">
+        We make pet adoption safe, transparent, and full of love.
+      </p>
+      <div class="card-grid">
+        <article class="info-card">
+          <div class="info-icon circle peach">❤</div>
+          <h3>Loving Care</h3>
+          <p>
+            All our pets receive proper medical care, nutrition, and
+            socialization before adoption.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-icon circle teal">🛡</div>
+          <h3>Health Checked</h3>
+          <p>
+            Vaccinated, neutered, and examined by licensed veterinarians to
+            ensure a healthy start.
+          </p>
+        </article>
+
+        <article class="info-card">
+          <div class="info-icon circle green">🏠</div>
+          <h3>Perfect Match</h3>
+          <p>
+            We match you with pets that fit your lifestyle, home, and family
+            needs.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PET FILTERS + LIST -->
+    <section id="pets" class="section light">
+      <h2 class="section-title">Meet Our Pets</h2>
+      <p class="section-subtitle">
+        Filter by type, size, and age to find your new best friend.
+      </p>
+
+      <div class="filters">
+        <div class="filter-group">
+          <label for="filter-type">Type</label>
+          <select id="filter-type">
+            <option value="all">All</option>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-size">Size</label>
+          <select id="filter-size">
+            <option value="all">All</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-age">Age</label>
+          <select id="filter-age">
+            <option value="all">All</option>
+            <option value="Puppy / Kitten">Puppy / Kitten</option>
+            <option value="Young">Young</option>
+            <option value="Adult">Adult</option>
+          </select>
+        </div>
+      </div>
+
+      <p class="favorites-indicator">
+        Favorites: <span id="favorite-count">0</span>
+      </p>
+
+      <div id="pet-list" class="pet-grid"></div>
+    </section>
+
+    <!-- ADOPTION PROCESS -->
+    <section id="process" class="section">
+      <h2 class="section-title">How Adoption Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-number">1</span>
+          <h3>Browse Pets</h3>
+          <p>Explore profiles to find a pet that fits your lifestyle.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">2</span>
+          <h3>Submit Application</h3>
+          <p>Tell us about yourself so we can ensure a perfect match.</p>
+        </div>
+        <div class="step">
+          <span class="step-number">3</span>
+          <h3>Meet &amp; Greet</h3>
+          <p>
+            Visit the shelter or arrange a meeting to get to know your future
+            buddy.
+          </p>
+        </div>
+        <div class="step">
+          <span class="step-number">4</span>
+          <h3>Bring Them Home</h3>
+          <p>
+            Complete the paperwork, receive care guidance, and welcome your new
+            family member.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARE TIPS -->
+    <section id="care" class="section light">
+      <h2 class="section-title">Pet Care Tips</h2>
+      <div class="care-grid">
+        <article class="care-card">
+          <h3>Daily Exercise</h3>
+          <p>
+            Most pets need at least 30 minutes of active play or walks every
+            day to stay healthy.
+          </p>
+        </article>
+        <article class="care-card">
+          <h3>Regular Vet Visits</h3>
+          <p>
+            Schedule annual checkups, vaccinations, and dental cleanings for
+            long-term health.
+          </p>
+        </article>
+        <article class="care-card">
+          <h3>Balanced Diet</h3>
+          <p>
+            Choose age-appropriate, vet-approved food and avoid feeding human
+            junk food.
+          </p>
+        </article>
+        <article class="care-card">
+          <h3>Love &amp; Training</h3>
+          <p>
+            Positive reinforcement, patience, and affection help your pet feel
+            safe and confident.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <button class="faq-question">
+            How much does it cost to adopt?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Adoption fees vary by pet and cover vaccinations, microchipping,
+              and initial medical care. Exact fees can be customized for your
+              local shelter.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I adopt if I live in an apartment?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes! Many pets are perfectly happy in apartments. We help you
+              choose pets that suit your space and lifestyle.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What if the pet doesn’t adjust?
+            <span class="faq-toggle">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              We provide guidance and training tips. If needed, we’ll work with
+              you on a safe return or re-homing process.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / ADOPTION FORM -->
+    <section id="contact" class="section contact-section light">
+      <div class="contact-text">
+        <h2 class="section-title">Ready to Adopt?</h2>
+        <p>
+          Fill out the form and our team will contact you with the next steps.
+        </p>
+        <ul class="contact-details">
+          <li>📍 PetNest Shelter, Your City</li>
+          <li>📞 +91-98765-43210</li>
+          <li>✉️ hello@petnest.com</li>
+        </ul>
+      </div>
+
+      <form class="contact-form" id="adoption-form">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input id="name" type="text" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input id="phone" type="tel" required />
+        </div>
+
+        <div class="form-group">
+          <label for="pet-preference">Preferred Pet</label>
+          <select id="pet-preference">
+            <option value="Any">Any</option>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Tell us about your home &amp; lifestyle</label>
+          <textarea id="message" rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn primary full-width">
+          Submit Application
+        </button>
+
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- MODAL FOR PET DETAILS -->
+  <div id="pet-modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© <span id="year"></span> PetNest. Made with ❤ for animals.</p>
+  </footer>
+</body>
+</html>
